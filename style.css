@@ -1,67 +1,129 @@
-*{
-    margin: 0;
-    padding: 0;
-    outline: none;
+* {
     box-sizing: border-box;
-  }
-  body{
-    font-family: montserrat;
-    display: flex;
+}
+
+body {
+    background: #10101B;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.half-width {
+    height: 570px;
+    background: #222436;
+    padding: 30px;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(#9cebfc,#6ae1fb);
-  }
-  .center{
-    /* display: none; */
-    width: 350px;
-    background: black;
-    border-radius: 20px;
-  }
-  input[type="text"]{
-    height: 60px;
-    width: 300px;
-    margin-top: 40px;
-    border-radius: 1px;
-    border: 1px solid #e1e7ea;
-    color: black;
-    font-size: 22px;
+}
+
+.pin-generator input,
+.input-section input {
+    color: white;
+}
+
+.generate-btn {
+    margin-top: 140px;
+    width: 180px;
+    padding: 50px;
+    border-radius: 50%;
+    border: 8px solid #39458C;
+    background-color: #495BC3;
+    color: #ffffff;
     font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.generate-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+input[type='text'] {
+    background-color: #3D4153;
+    padding: 10px 0px;
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #858299;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* css for readonly field */
+input:read-only {
+    background-color: #3D4153 !important;
+}
+
+input[type='text']:focus {
+    background-color: #3D4153;
+    color: #fff;
+    font-size: 20px;
+}
+
+.numbers {
+    margin: 30px 0;
+}
+
+.calc-typed {
+    margin-top: 20px;
+    font-size: 45px;
     text-align: right;
-    padding-right: 20px;
-    background: linear-gradient(#d1dce0,#dfe6e9);
-  }
-  form .buttons{
-    width: 300px;
-    margin: 10px 25px 0 25px;
-    padding: 10px 0;
-  }
-  input[type="button"]{
-    width: 58px;
-    height: 55px;
+    color: #fff;
+}
+
+.calc-button-row {
+    width: 100%;
+}
+
+.button {
+    width: 20%;
+    background: #425062;
+    color: #fff;
+    padding: 20px 0;
     margin: 5px;
-    font-size: 22px;
-    line-height: 55px;
-    border-radius: 3px;
-    border: 1px solid #d9d9d9;
-    background: linear-gradient(#d9d9d9, #bfbfbf);
-  }
-  input[type="button"]:hover{
-    transition: .5s;
-    background: linear-gradient(#bfbfbf, #d9d9d9);
-  }
-  input#clear{
-    background: #ff1a1a;
-    border: 1px solid #cc0000;
-    color: white;
-  }
-  input#equal{
-    width: 275px;
-    margin: 10px 0 10px 0;
-    font-size: 30px;
-    color: white;
-    background: #ff3d00;
-    border: 1px solid #b32a00;
-  }
-  
+    display: inline-block;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: -4px;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+
+.blink-me {
+    color: #E0B612;
+}
+
+.submit-btn {
+    border: none;
+    margin-top: 20px;
+    padding: 10px 120px;
+    border-radius: 5px;
+    background: #3a489b;
+    color: #fff;
+}
+
+.notify {
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    background: #222436;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 5px 20px;
+    display: none;
+}
+
+.notify-section {
+    width: 35%;
+    margin: 0 auto;
+}
+
+.action-left {
+    color: #FF3C5F;
+    margin-top: 10px;
+}

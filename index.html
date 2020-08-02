@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <title>Digital Calulator</title>
 </head>
+
 <body>
-    <div class="center">
-        <form name="myform">
-          <input type="text" id="display" name="display" disabled>
-          <div class="buttons">
-            <input type="button" id="seven" value="7" onclick="myclick('7')">
-            <input type="button" id="eight" value="8" onclick="myclick('8')">
-            <input type="button" id="nine" value="9" onclick="myclick('9')">
-            <input type="button" id="divide" value="/" onclick="myclick('/')"><br>
-            <input type="button" id="four" value="4" onclick="myclick('4')">
-            <input type="button" id="five" value="5" onclick="myclick('5')">
-            <input type="button" id="six" value="6" onclick="myclick('6')">
-            <input type="button" id="multi" value="*" onclick="myclick('*')"><br>
-            <input type="button" id="one" value="1" onclick="myclick('1')">
-            <input type="button" id="two" value="2" onclick="myclick('2')">
-            <input type="button" id="three" value="3" onclick="myclick('3')">
-            <input type="button" id="subs" value="-" onclick="myclick('-')"><br>
-            <input type="button" id="dot" value="." onclick="myclick('.')">
-            <input type="button" id="zero" value="0" onclick="myclick('0')">
-            <input type="button" id="add" value="+" onclick="myclick('+')">
-            <input type="button" id="clear" value="C" onclick="ac()"><br>
-            <input type="button" id="equal" value="=" onclick="equalto()">
-          </div>
-  </form>
-  </div>
-  <script>
-      //for digit
-  function myclick(a){
-      myform.display.value+=a;
-  }
-  //for =
-  function equalto(){
-      myform.display.value = eval(myform.display.value); 
-  }
-  //for clear
-  function ac(){
-    myform.display.value =" ";
-  } 
-  </script>
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input readonly class="form-control" type="text">
+                    <button class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input readonly class="form-control" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                                <div class="button numberKey">7</div>
+                                <div class="button numberKey">8</div>
+                                <div class="button numberKey">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button numberKey">4</div>
+                                <div class="button numberKey">5</div>
+                                <div class="button numberKey">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button numberKey">1</div>
+                                <div class="button numberKey">2</div>
+                                <div class="button numberKey">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button back"> <</div> 
+                                <div class="button numberKey">0</div>
+                                <div class="button clear">C</div>
+                            </div>
+                            <div>
+                                <button type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left"> <span id="tryLeft">3</span>  try left</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="notify-section">
+                <p id="notMatchedMessage" class="notify">❌ Pin Didn't Match, Please try again</p>
+                <p id="matchedMessage" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
 </body>
+
 </html>
